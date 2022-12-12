@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>	
+	<PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />	
 	<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.0" />	
 	<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />	
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
@@ -17,6 +18,12 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\..\Discount\DiscountGrpc\Protos\discount.proto" GrpcServices="Client">
+      <Link>Protos\discount.proto</Link>
+    </Protobuf>
   </ItemGroup>
 
 </Project>
